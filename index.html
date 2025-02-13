@@ -96,10 +96,16 @@
         });
 
         document.getElementById("noBtn").addEventListener("mouseover", function() {
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 100);
-            this.style.left = ${x}px;
-            this.style.top = ${y}px;
+            let button = this;
+            let maxX = window.innerWidth - button.offsetWidth - 20; // Evita que salga del borde derecho
+            let maxY = window.innerHeight - button.offsetHeight - 20; // Evita que salga del borde inferior
+        
+            let x = Math.random() * maxX;
+            let y = Math.random() * maxY;
+        
+            button.style.position = "absolute";
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
         });
     </script>
 
