@@ -16,7 +16,7 @@ document.getElementById('siBtn').addEventListener('click', function() {
     document.getElementById('noBtn').style.display = 'none';
 
     document.getElementById('messageContainer').style.display = 'block';
-    document.getElementById('messageContainer').innerHTML = '¡Oh Siii! jajaja';
+    document.getElementById('messageContainer').innerHTML = '¡Sabia que dirias que si! jajaja XD';
 
     setTimeout(function() {
         document.getElementById('happyGifContainer').style.display = 'none';
