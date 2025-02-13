@@ -4,67 +4,71 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
     text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
 }
 
 #gifContainerImg {
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px;
     cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
 }
+
 #siBtn {
-    padding: 10px 20px; 
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #009705; /* Verde */
+    background-color: #28a745;
     color: white;
-    border: 2px solid #FFC0CB; /* Bordes rosa */
-    border-radius: 10px; /* Esquinas redondeadas */
+    border: 3px solid #ffffff;
+    box-shadow: 0px 5px 15px rgba(40, 167, 69, 0.5);
 }
 
 #noBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    background-color: #FF5733; /* Rojo */
+    background-color: #dc3545;
     color: white;
-    border: 2px solid #FFC0CB; /* Bordes rosa */
-    border-radius: 10px; /* Esquinas redondeadas */
-}
-#noBtn span {
-    font-size: 18px;
-    color: #fcf4f4; /* Cambia el color del texto según tus preferencias */
-    /* Otras propiedades de estilo aquí */
+    border: 3px solid #ffffff;
+    box-shadow: 0px 5px 15px rgba(220, 53, 69, 0.5);
 }
 
-#siBtn:hover{
-    background-color: #053a03; /* Cambia a otro color en hover, puedes ajustar el valor según tus preferencias */
+#siBtn:hover {
+    background-color: #218838;
+    transform: scale(1.1);
 }
+
 #noBtn:hover {
-    background-color: #641e0d; /* Cambia a otro color en hover, puedes ajustar el valor según tus preferencias */
-}
-.bg-green {
-    background-color: #ffffff; /* Nuevo color de fondo verde */
+    background-color: #c82333;
+    transform: scale(1.1);
 }
 
 #messageContainer {
-    font-size: 30px;
-    color: #FF0000; /* Color rojo */
-    font-family: 'YourDesiredFont', sans-serif; /* Reemplaza 'YourDesiredFont' con la fuente que desees */
-    text-shadow: 2px 2px 4px #000; /* Borde simulado */
-    animation: pulse 0.5s infinite alternate; /* Animación de palpitación más rápida */
+    font-size: 32px;
+    color: #d9534f;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    animation: pulse 1s infinite alternate;
 }
 
 @keyframes pulse {
@@ -72,6 +76,6 @@ button {
         transform: scale(1);
     }
     to {
-        transform: scale(1.3); /* Zoom más grande */
+        transform: scale(1.2);
     }
 }
