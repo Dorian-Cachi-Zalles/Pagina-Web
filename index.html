@@ -96,19 +96,19 @@
         });
 
         document.getElementById("noBtn").addEventListener("mouseover", function() {
-            let button = this;
-            let container = document.querySelector(".container"); // Obtiene el contenedor
-            let containerRect = container.getBoundingClientRect(); // Obtiene su tamaño y posición
-        
-            let maxX = containerRect.width - button.offsetWidth - 20; // Área dentro del contenedor
-            let maxY = containerRect.height - button.offsetHeight - 20;
-        
-            let x = Math.random() * maxX;
-            let y = Math.random() * maxY;
-        
-            button.style.position = "absolute";
-            button.style.left = `${containerRect.left + x}px`;
-            button.style.top = `${containerRect.top + y}px`;
+        let button = this;
+        let container = document.querySelector(".container"); // Selecciona el contenedor
+        let containerRect = container.getBoundingClientRect(); // Obtiene tamaño y posición
+    
+        let maxX = containerRect.width / 2 - button.offsetWidth - 10; // Reduce el ancho del área
+        let maxY = containerRect.height / 2 - button.offsetHeight - 10; // Solo la mitad superior
+    
+        let x = Math.random() * maxX;
+        let y = Math.random() * maxY;
+    
+        button.style.position = "absolute";
+        button.style.left = `${containerRect.left + x + 10}px`; // Ajuste de margen
+        button.style.top = `${containerRect.top + y + 10}px`;
         });
     </script>
 
