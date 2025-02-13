@@ -97,15 +97,18 @@
 
         document.getElementById("noBtn").addEventListener("mouseover", function() {
             let button = this;
-            let maxX = window.innerWidth - button.offsetWidth - 20; // Evita que salga del borde derecho
-            let maxY = window.innerHeight - button.offsetHeight - 20; // Evita que salga del borde inferior
+            let container = document.querySelector(".container"); // Obtiene el contenedor
+            let containerRect = container.getBoundingClientRect(); // Obtiene su tamaño y posición
+        
+            let maxX = containerRect.width - button.offsetWidth - 20; // Área dentro del contenedor
+            let maxY = containerRect.height - button.offsetHeight - 20;
         
             let x = Math.random() * maxX;
             let y = Math.random() * maxY;
         
             button.style.position = "absolute";
-            button.style.left = `${x}px`;
-            button.style.top = `${y}px`;
+            button.style.left = `${containerRect.left + x}px`;
+            button.style.top = `${containerRect.top + y}px`;
         });
     </script>
 
