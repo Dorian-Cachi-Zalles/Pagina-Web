@@ -3,45 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers House</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Invitación a San Valentín encoded</title>
 </head>
 <body>
-    <div class="container">
-        
-        <div id="gifContainer">
-            <img id="gifContainerImg" src="https://i.gifer.com/fy2H.gif" alt="Ositos Iniciales" ">
-        </div>
-        <div id="happyGifContainer" style="display: none;">
-            <img src="https://encoded.pe/codepen/mocha.gif" alt="Ositos Felices" style="width: 100%; height: 100%;">
-        </div>
-        <div id="happyGifContainer2" style="display: none;">
-            <img src="https://i.gifer.com/Aq.gif" alt="Ositos Felices" style bb="width: 100%; height: 100%;">
-        </div>
-        <div id="happyGifContainer3" style="display: none;">
-            <img src="https://i.gifer.com/Aq.gif" alt="Ositos Felices" style="width: 100%; height: 100%;">
-        </div>
-        <div id="happyGifContainer4" style="display: none;">
-            <img src="https://i.gifer.com/Aq.gif" alt="Ositos Felices" style="width: 100%; height: 100%;">
-        </div>
-        <div id="sadGifContainer" style="display: none;">
-            <img src="https://i.gifer.com/3Qe6.gif" alt="Osito Triste" style="width: 80%; height: 80%;">
-        </div>
-        <div id="sadGifContainer1" style="display: none;">
-            <img src="https://i.gifer.com/3Qe6.gif" alt="Osito Triste" style="width: 80%; height: 80%;">
-        </div>
-        <div id="sadGifContainer2" style="display: none;">
-            <img src="https://i.gifer.com/3Qe6.gif" alt="Osito Triste" style="width: 80%; height: 80%;">
-        </div>
-        
-        <h1 id="question">¿ Mary Luz Palacios  , Quieres ser mi novia?</h1>
-        <div id="messageContainer" style="display: none;"></div>
-
-        <button id="siBtn">Sí</button>
-        <button id="noBtn">No</button>
-        
-    </div>
-
+    <header>
+        <h1>Burgers House</h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menú de Hamburguesas</h2>
+            <div class="burger">
+                <h3>Clásica</h3>
+                <p>Carne de res, queso, lechuga, tomate y salsa especial.</p>
+                <button onclick="agregarCarrito('Clásica')">Agregar</button>
+            </div>
+            <div class="burger">
+                <h3>Doble Queso</h3>
+                <p>Doble carne, doble queso, cebolla y salsa BBQ.</p>
+                <button onclick="agregarCarrito('Doble Queso')">Agregar</button>
+            </div>
+        </section>
+        <section id="carrito">
+            <h2>Carrito</h2>
+            <ul id="listaCarrito"></ul>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
-                           </html>
+</html>
