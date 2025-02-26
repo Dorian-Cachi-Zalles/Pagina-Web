@@ -3,32 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burgers House</title>
+    <title>Monster Burger</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: black;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .contact-btn {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('burger.jpg') no-repeat center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Burgers House</h1>
+        <div class="logo">
+            <img src="logo.png" alt="Monster Burger">
+            <span>Monster Burger</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="contact-btn">+1 596 9999 99</a>
     </header>
-    <main>
-        <section id="menu">
-            <h2>Menú de Hamburguesas</h2>
-            <div class="burger">
-                <h3>Clásica</h3>
-                <p>Carne de res, queso, lechuga, tomate y salsa especial.</p>
-                <button onclick="agregarCarrito('Clásica')">Agregar</button>
-            </div>
-            <div class="burger">
-                <h3>Doble Queso</h3>
-                <p>Doble carne, doble queso, cebolla y salsa BBQ.</p>
-                <button onclick="agregarCarrito('Doble Queso')">Agregar</button>
-            </div>
-        </section>
-        <section id="carrito">
-            <h2>Carrito</h2>
-            <ul id="listaCarrito"></ul>
-        </section>
-    </main>
-    <script src="script.js"></script>
+    <section class="hero">
+        <h1>Monster Burger</h1>
+        <p>Deliciosas hamburguesas con ingredientes de calidad.</p>
+    </section>
 </body>
 </html>
